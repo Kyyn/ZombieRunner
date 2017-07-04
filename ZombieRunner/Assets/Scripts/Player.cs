@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
     void Start () {
 
         spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();
-        print(spawnPoints.Length);
+        //print(spawnPoints.Length);
     }
 	
 	// Update is called once per frame
