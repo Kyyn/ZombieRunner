@@ -36,4 +36,8 @@ public class Player : MonoBehaviour {
         int i = Random.Range(1, spawnPoints.Length);
         transform.position = spawnPoints[i].transform.position;
     }
+
+
+
+    
 }
