@@ -11,7 +11,7 @@ public class Daycycle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float angleThisFrame = Time.deltaTime / 360  * minutesPerSecond;
-        transform.Rotate (angleThisFrame, 0, 0);
+        transform.Rotate (-angleThisFrame, 0, 0);
         //transform.RotateAround(transform.position, Vector3.forward, angleThisFrame);
 		
 	}

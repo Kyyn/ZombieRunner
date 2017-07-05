@@ -19,6 +19,7 @@ public class ClearArea : MonoBehaviour {
         if (numberObjectsCollided == 0 && timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea)
         {
             SendMessageUpwards("OnFindClearArea");
+            Debug.Log("Clear Area Found");
             foundClearArea = true;
         }
 	}
