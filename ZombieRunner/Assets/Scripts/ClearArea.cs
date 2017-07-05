@@ -6,6 +6,7 @@ public class ClearArea : MonoBehaviour {
 
     private float timeSinceLastTrigger = 0f;
     private int numberObjectsCollided = 0;
+    private bool foundClearArea = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,9 +16,10 @@ public class ClearArea : MonoBehaviour {
 	void Update () {
         timeSinceLastTrigger += Time.deltaTime;
 
-        if (numberObjectsCollided == 0 && timeSinceLastTrigger > 1f)
+        if (numberObjectsCollided == 0 && timeSinceLastTrigger > 1f && Time.realtimeSinceStartup > 10f && !foundClearArea)
         {
-            Debug.Log("Found Clear Area");
+            SendMessageUpwards("OnFindClearArea");
+            foundClearArea = true;
         }
 	}
 

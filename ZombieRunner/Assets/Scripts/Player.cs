@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Transform playerSpawnPoints;
-    public bool reSpawn = false;
 
+    private bool reSpawn = false;
     private Transform[] spawnPoints;
     private bool lastToggle = false;
 
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 
         spawnPoints = playerSpawnPoints.GetComponentsInChildren<Transform>();
         //print(spawnPoints.Length);
+
     }
 	
 	// Update is called once per frame
@@ -38,6 +39,13 @@ public class Player : MonoBehaviour {
     }
 
 
-
-    
+    void OnFindClearArea()
+    {
+        Invoke("DropFlare", 3f);
+        
+    }
+    void DropFlare()
+    {
+        // Drop a flare
+    }
 }
